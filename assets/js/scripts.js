@@ -30,6 +30,7 @@
 //   e.target.innerHTML = "You just clicked me!";
 // })
 
+/* Inefficient for event bubbling
 var btns = document.querySelectorAll('#book-list .delete');
 Array.from(btns);
 for(i in btns) {
@@ -37,3 +38,14 @@ for(i in btns) {
         e.target.parentElement.remove()
     });
 }
+*/
+
+// Efficient for event bubbling
+const list = document.querySelector('#book-list ul');
+
+list.addEventListener('click', function(e) {
+    if (e.target.className === 'delete') {
+        const li = e.target.parentElement;
+        list.removeChild(li);
+    }
+});
