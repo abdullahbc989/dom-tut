@@ -1,3 +1,6 @@
+// if script tag is in head
+// document.addEventListener('DOMContentLoaded'. function() { put code in hee });
+
 // const banner = document.querySelector('#page-banner');
 
 // console.log('#page-banner node type is:', banner.nodeType);
